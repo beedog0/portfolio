@@ -16,6 +16,7 @@ export const projects: Project[] = [
       "Competitive multiplayer typing platform with ranked ELO matchmaking and real-time WebSocket battles.",
     tags: ["Next.js", "TypeScript", "Supabase", "WebSocket"],
     featured: true,
+    galleryOnly: true,
     images: [
       "/projects/typingarena/1.png",
       "/projects/typingarena/2.png",
