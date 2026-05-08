@@ -5,7 +5,7 @@ import { FlowCue } from "./FlowCue";
 
 export function About() {
   return (
-    <section id="about" className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+    <section id="about" className="mx-auto max-w-6xl px-6 py-14 md:py-20">
       <motion.p
         initial={{ opacity: 0, y: 12 }}
         whileInView={{ opacity: 1, y: 0 }}

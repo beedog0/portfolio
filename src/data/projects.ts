@@ -62,16 +62,19 @@ export const projects: Project[] = [
   },
 ];
 
-export const techStack: string[] = [
-  "Next.js",
-  "TypeScript",
-  "React",
-  "Tailwind CSS",
-  "Supabase",
-  "Python",
-  "SQL",
-  "JavaScript",
-  "Pine Script",
-  "Node.js",
-  "Git",
+export type StackGroup = { label: string; items: string[] };
+
+export const stackGroups: StackGroup[] = [
+  {
+    label: "Languages",
+    items: ["TypeScript", "JavaScript", "Python", "SQL", "Pine Script"],
+  },
+  {
+    label: "Frameworks",
+    items: ["Next.js", "React", "React Native", "Expo", "Tailwind CSS"],
+  },
+  {
+    label: "Tools & Services",
+    items: ["Node.js", "Supabase", "WebSocket", "Mapbox", "Git"],
+  },
 ];

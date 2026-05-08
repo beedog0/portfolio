@@ -9,7 +9,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="mx-auto max-w-6xl px-6 pt-20 pb-28 md:pt-32 md:pb-40"
+      className="mx-auto max-w-6xl px-6 pt-16 pb-20 md:pt-24 md:pb-28"
     >
       <motion.p
         initial={{ opacity: 0, y: 12 }}

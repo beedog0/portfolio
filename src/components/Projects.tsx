@@ -14,7 +14,7 @@ const SPANS = [
 
 export function Projects() {
   return (
-    <section id="projects" className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+    <section id="projects" className="mx-auto max-w-6xl px-6 py-14 md:py-20">
       <motion.p
         initial={{ opacity: 0, y: 12 }}
         whileInView={{ opacity: 1, y: 0 }}
