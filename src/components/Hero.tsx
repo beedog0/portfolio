@@ -35,7 +35,7 @@ export function Hero() {
         transition={{ duration: 0.6, delay: 0.18 }}
         className="mt-6 max-w-2xl text-base leading-relaxed text-[#525252] md:text-lg"
       >
-        CS student at the University of Houston who builds full-stack
+        CIS student at the University of Houston who builds full-stack
         applications, automated trading tools, and multiplayer experiences.
         Passionate about real-time systems, clean UI, and shipping things that
         work.

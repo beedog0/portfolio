@@ -10,7 +10,7 @@ const inter = Inter({
 
 const SITE_TITLE = "Bryan Nguyen — Developer & Builder";
 const SITE_DESCRIPTION =
-  "CS student at the University of Houston who builds full-stack applications, automated trading tools, and multiplayer experiences.";
+  "CIS student at the University of Houston who builds full-stack applications, automated trading tools, and multiplayer experiences.";
 
 export const metadata: Metadata = {
   title: SITE_TITLE,
