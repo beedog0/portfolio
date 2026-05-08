@@ -13,7 +13,7 @@ export const projects: Project[] = [
   {
     name: "TypingArena",
     description:
-      "Competitive multiplayer typing platform with ranked ELO matchmaking and real-time WebSocket battles.",
+      "Competitive multiplayer typing with ranked ELO matchmaking, real-time WebSocket duels, and per-keystroke verification to keep the leaderboard honest.",
     tags: ["Next.js", "TypeScript", "Supabase", "WebSocket"],
     featured: true,
     galleryOnly: true,
@@ -31,7 +31,7 @@ export const projects: Project[] = [
   {
     name: "Caldera",
     description:
-      "Trail discovery and hike-tracking app with live GPS, satellite maps, gear loadouts, and a used-gear marketplace.",
+      "iOS hiking companion: live GPS hike tracking, trail discovery on street and satellite maps, gear loadouts, and a peer-to-peer used-gear marketplace.",
     tags: ["Expo", "React Native", "Supabase", "Mapbox"],
     galleryOnly: true,
     images: [
@@ -49,14 +49,14 @@ export const projects: Project[] = [
   {
     name: "TCE Engine",
     description:
-      "Multi-filter signal generation engine for futures trading with automated execution pipeline.",
+      "Composable Pine Script signal engine for futures trading. Chains technical filters and dispatches webhook orders to TradersPost for hands-off execution.",
     tags: ["Pine Script", "TradersPost", "Webhook"],
     code: "#",
   },
   {
     name: "MUKSCAN",
     description:
-      "AI-powered Pokemon card grading assistant bot with pricing analysis and investment tools.",
+      "Discord bot that estimates Pokémon card grades from a single photo via Gemini vision and OpenCV preprocessing, with live market pricing.",
     tags: ["Discord.js", "Gemini API", "OpenCV"],
     code: "#",
   },
