@@ -29,18 +29,18 @@ export function ResumeModal({ open, onClose }: Props) {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.2 }}
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-[#171717]/60 px-4 py-8 backdrop-blur-sm"
+          transition={{ duration: 0.15, ease: "easeOut" }}
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-[#171717]/70 px-4 py-8"
           onClick={onClose}
           role="dialog"
           aria-modal="true"
           aria-label="Resume preview"
         >
           <motion.div
-            initial={{ opacity: 0, y: 12, scale: 0.98 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 12, scale: 0.98 }}
-            transition={{ duration: 0.25 }}
+            initial={{ opacity: 0, y: 6 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 6 }}
+            transition={{ duration: 0.15, ease: "easeOut" }}
             className="flex h-full max-h-[900px] w-full max-w-4xl flex-col overflow-hidden rounded-[10px] border border-[#e5e5e5] bg-white shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
@@ -61,7 +61,7 @@ export function ResumeModal({ open, onClose }: Props) {
                   type="button"
                   onClick={onClose}
                   aria-label="Close"
-                  className="inline-flex h-7 w-7 items-center justify-center rounded-md text-[#525252] transition-colors hover:bg-[#f5f5f5] hover:text-[#171717]"
+                  className="inline-flex h-7 w-7 cursor-pointer items-center justify-center rounded-md text-[#525252] transition-colors hover:bg-[#f5f5f5] hover:text-[#171717]"
                 >
                   <span aria-hidden="true">✕</span>
                 </button>
