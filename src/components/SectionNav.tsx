@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 const sections = [
-  { id: "top", label: "Intro" },
+  { id: "top", label: "Top" },
   { id: "projects", label: "Projects" },
   { id: "stack", label: "Stack" },
   { id: "about", label: "About" },
@@ -33,9 +33,9 @@ export function SectionNav() {
   return (
     <nav
       aria-label="Section navigation"
-      className="fixed right-6 top-1/2 z-40 hidden -translate-y-1/2 md:block"
+      className="fixed left-6 top-1/2 z-40 hidden -translate-y-1/2 md:block"
     >
-      <ul className="flex flex-col items-end gap-3">
+      <ul className="flex flex-col items-start gap-3">
         {sections.map(({ id, label }) => {
           const active = activeId === id;
           return (
@@ -47,6 +47,13 @@ export function SectionNav() {
                 aria-label={`Jump to ${label}`}
               >
                 <span
+                  className={`block h-1.5 rounded-full transition-all ${
+                    active
+                      ? "w-6 bg-[#171717]"
+                      : "w-1.5 bg-[#d4d4d4] group-hover:bg-[#737373]"
+                  }`}
+                />
+                <span
                   className={`text-[10px] font-medium uppercase tracking-[0.2em] transition-opacity ${
                     active
                       ? "text-[#171717] opacity-100"
@@ -55,13 +62,6 @@ export function SectionNav() {
                 >
                   {label}
                 </span>
-                <span
-                  className={`block h-1.5 rounded-full transition-all ${
-                    active
-                      ? "w-6 bg-[#171717]"
-                      : "w-1.5 bg-[#d4d4d4] group-hover:bg-[#737373]"
-                  }`}
-                />
               </a>
             </li>
           );
