@@ -48,7 +48,7 @@ export function About() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-60px" }}
         transition={{ duration: 0.5, delay: 0.1 }}
-        className="mt-12 flex justify-center"
+        className="mt-24 flex justify-center"
       >
         <a
           href="#contact"
