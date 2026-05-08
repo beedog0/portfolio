@@ -59,7 +59,7 @@ export function Contact() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.18 }}
-        className="mt-10 divide-y divide-[#e5e5e5] border-y border-[#e5e5e5]"
+        className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3"
       >
         {contacts.map(({ label, value, href }) => (
           <li key={label}>
@@ -67,17 +67,22 @@ export function Contact() {
               href={href}
               target={href.startsWith("http") ? "_blank" : undefined}
               rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
-              className="group flex items-center justify-between py-4 transition-colors"
+              className="group flex h-full flex-col rounded-[10px] border-[0.5px] border-[#e5e5e5] bg-white p-5 transition-colors hover:border-[#a3a3a3]"
             >
-              <span className="text-xs font-medium uppercase tracking-[0.18em] text-[#a3a3a3]">
-                {label}
-              </span>
-              <span className="text-sm font-medium text-[#171717] transition-colors group-hover:text-[#525252] md:text-base">
-                {value}{" "}
-                <span aria-hidden="true" className="text-[#a3a3a3]">
+              <div className="flex items-start justify-between">
+                <span className="text-[11px] font-medium uppercase tracking-[0.28em] text-[#737373]">
+                  {label}
+                </span>
+                <span
+                  aria-hidden="true"
+                  className="text-[#a3a3a3] transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                >
                   ↗
                 </span>
-              </span>
+              </div>
+              <p className="mt-8 break-all text-sm font-medium text-[#171717] md:text-base">
+                {value}
+              </p>
             </a>
           </li>
         ))}
