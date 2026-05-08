@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { projects } from "@/data/projects";
 import { ProjectCard } from "./ProjectCard";
-import { FlowCue } from "./FlowCue";
 
 const SPANS = [
   "md:col-span-3",
@@ -45,7 +44,6 @@ export function Projects() {
         </motion.div>
       </div>
 
-      <FlowCue target="#stack" label="Stack" direction="down" className="mt-16" />
     </section>
   );
 }

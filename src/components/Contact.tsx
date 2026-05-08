@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FlowCue } from "./FlowCue";
 
 const contacts = [
   {
@@ -89,7 +88,6 @@ export function Contact() {
         ))}
       </motion.ul>
 
-      <FlowCue target="#top" label="Back to top" direction="up" className="mt-16" />
     </section>
   );
 }

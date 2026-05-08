@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FlowCue } from "./FlowCue";
 
 export function About() {
   return (
@@ -44,7 +43,6 @@ export function About() {
         </p>
       </motion.div>
 
-      <FlowCue target="#contact" label="Contact" direction="down" className="mt-16" />
     </section>
   );
 }
