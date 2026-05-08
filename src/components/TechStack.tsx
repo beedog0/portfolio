@@ -5,7 +5,7 @@ import { techStack } from "@/data/projects";
 
 export function TechStack() {
   return (
-    <section className="mx-auto max-w-6xl px-6 py-20 md:py-24">
+    <section id="stack" className="mx-auto max-w-6xl px-6 py-20 md:py-24">
       <motion.p
         initial={{ opacity: 0, y: 12 }}
         whileInView={{ opacity: 1, y: 0 }}

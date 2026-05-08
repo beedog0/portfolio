@@ -29,7 +29,7 @@ export function Navbar() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a
           href="#top"
-          className="text-base font-semibold tracking-tight text-[#171717]"
+          className="text-xl font-semibold tracking-tight text-[#171717]"
         >
           bryan.
         </a>
