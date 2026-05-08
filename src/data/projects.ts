@@ -23,6 +23,7 @@ export const projects: Project[] = [
       "/projects/typingarena/3.png",
       "/projects/typingarena/4.png",
       "/projects/typingarena/5.png",
+      "/projects/typingarena/6.png",
     ],
     live: "https://typingarena.us/",
     code: "#",
