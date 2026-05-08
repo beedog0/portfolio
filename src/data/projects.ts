@@ -26,7 +26,7 @@ export const projects: Project[] = [
       "/projects/typingarena/6.png",
     ],
     live: "https://typingarena.us/",
-    code: "#",
+    code: "https://github.com/beedog0/typingarena",
   },
   {
     name: "Caldera",
@@ -44,21 +44,20 @@ export const projects: Project[] = [
       "/projects/caldera/6.png",
       "/projects/caldera/7.png",
     ],
-    code: "#",
+    code: "https://github.com/beedog0/caldera",
   },
   {
     name: "TCE Engine",
     description:
       "Composable Pine Script signal engine for futures trading. Chains technical filters and dispatches webhook orders to TradersPost for hands-off execution.",
     tags: ["Pine Script", "TradersPost", "Webhook"],
-    code: "#",
   },
   {
     name: "MUKSCAN",
     description:
       "Discord bot that estimates Pokémon card grades from a single photo via Gemini vision and OpenCV preprocessing, with live market pricing.",
     tags: ["Discord.js", "Gemini API", "OpenCV"],
-    code: "#",
+    code: "https://github.com/beedog0/mukscan",
   },
 ];
 
