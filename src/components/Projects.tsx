@@ -25,7 +25,7 @@ export function Projects() {
         Featured projects
       </motion.p>
 
-      <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-6">
+      <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-6">
         {projects.map((project, i) => (
           <ProjectCard
             key={project.name}
@@ -45,7 +45,7 @@ export function Projects() {
         </motion.div>
       </div>
 
-      <FlowCue target="#stack" label="Stack" direction="down" className="mt-12" />
+      <FlowCue target="#stack" label="Stack" direction="down" className="mt-16" />
     </section>
   );
 }

@@ -21,7 +21,7 @@ export function About() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.05 }}
-        className="mt-6 max-w-3xl space-y-5 text-base leading-relaxed text-[#525252] md:text-lg"
+        className="mt-6 max-w-3xl space-y-4 text-base leading-relaxed text-[#525252] md:text-lg"
       >
         <p>
           I&apos;m a Computer Information Systems student at the{" "}
@@ -44,7 +44,7 @@ export function About() {
         </p>
       </motion.div>
 
-      <FlowCue target="#contact" label="Contact" direction="down" className="mt-24" />
+      <FlowCue target="#contact" label="Contact" direction="down" className="mt-16" />
     </section>
   );
 }

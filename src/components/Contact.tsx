@@ -60,7 +60,7 @@ export function Contact() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.18 }}
-        className="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3"
+        className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-3"
       >
         {contacts.map(({ label, value, href }) => (
           <li key={label}>
@@ -89,7 +89,7 @@ export function Contact() {
         ))}
       </motion.ul>
 
-      <FlowCue target="#top" label="Back to top" direction="up" className="mt-24" />
+      <FlowCue target="#top" label="Back to top" direction="up" className="mt-16" />
     </section>
   );
 }
