@@ -34,10 +34,10 @@ export const projects: Project[] = [
     tags: ["Expo", "React Native", "Supabase", "Mapbox"],
     imageOrientation: "portrait",
     images: [
+      "/projects/caldera/4.png",
       "/projects/caldera/1.png",
       "/projects/caldera/2.png",
       "/projects/caldera/3.png",
-      "/projects/caldera/4.png",
       "/projects/caldera/5.png",
       "/projects/caldera/6.png",
       "/projects/caldera/7.png",
