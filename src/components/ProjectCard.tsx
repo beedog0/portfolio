@@ -13,8 +13,8 @@ type Props = {
 
 export function ProjectCard({ project, className = "" }: Props) {
   const [galleryOpen, setGalleryOpen] = useState(false);
-  const hasImages = project.images && project.images.length > 0;
-  const isPortrait = project.imageOrientation === "portrait";
+  const hasImages = !!project.images?.length;
+  const showCardPreview = hasImages && !project.galleryOnly;
 
   return (
     <>
@@ -25,32 +25,7 @@ export function ProjectCard({ project, className = "" }: Props) {
         transition={{ duration: 0.5 }}
         className={`group flex flex-col rounded-[10px] border-[0.5px] border-[#e5e5e5] bg-white p-6 transition-colors hover:border-[#a3a3a3] ${className}`}
       >
-        {hasImages && isPortrait && (
-          <button
-            type="button"
-            onClick={() => setGalleryOpen(true)}
-            aria-label={`View ${project.name} screenshots`}
-            className="relative mb-6 flex aspect-[4/3] cursor-pointer items-end justify-center overflow-hidden rounded-[8px] bg-gradient-to-br from-[#0f0f10] via-[#1a1a1c] to-[#262629] pt-6"
-          >
-            <div className="relative h-[110%] w-auto">
-              <div className="relative h-full aspect-[9/19.5] overflow-hidden rounded-t-[1.75rem] border-[3px] border-b-0 border-[#0a0a0a] shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
-                <Image
-                  src={project.images![0]}
-                  alt={`${project.name} preview`}
-                  fill
-                  sizes="(max-width: 768px) 240px, 320px"
-                  className="object-cover object-top"
-                  priority={project.featured}
-                />
-              </div>
-            </div>
-            <div className="pointer-events-none absolute right-3 top-3 rounded-md bg-white/90 px-2 py-1 text-[10px] font-medium uppercase tracking-[0.18em] text-[#525252] opacity-0 backdrop-blur transition-opacity group-hover:opacity-100">
-              {project.images!.length} shots
-            </div>
-          </button>
-        )}
-
-        {hasImages && !isPortrait && (
+        {showCardPreview && (
           <button
             type="button"
             onClick={() => setGalleryOpen(true)}
@@ -61,7 +36,7 @@ export function ProjectCard({ project, className = "" }: Props) {
               src={project.images![0]}
               alt={`${project.name} preview`}
               fill
-              sizes="(max-width: 768px) 100vw, 560px"
+              sizes="(max-width: 768px) 100vw, 760px"
               className="object-cover object-top transition-transform duration-500 group-hover/preview:scale-[1.02]"
               priority={project.featured}
             />
@@ -89,8 +64,8 @@ export function ProjectCard({ project, className = "" }: Props) {
           ))}
         </div>
 
-        {(project.live || project.code) && (
-          <div className="mt-5 flex items-center gap-4 border-t border-[#e5e5e5] pt-4 text-xs">
+        {(project.live || project.code || project.galleryOnly) && (
+          <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-[#e5e5e5] pt-4 text-xs">
             {project.live && (
               <a
                 href={project.live}
@@ -106,6 +81,21 @@ export function ProjectCard({ project, className = "" }: Props) {
                   ↗
                 </span>
               </a>
+            )}
+            {project.galleryOnly && hasImages && (
+              <button
+                type="button"
+                onClick={() => setGalleryOpen(true)}
+                className="group/link inline-flex cursor-pointer items-center gap-1 font-medium text-[#171717] transition-colors hover:text-[#525252]"
+              >
+                Screenshots
+                <span
+                  aria-hidden="true"
+                  className="text-[#a3a3a3] transition-transform group-hover/link:translate-x-0.5"
+                >
+                  →
+                </span>
+              </button>
             )}
             {project.code && (
               <a

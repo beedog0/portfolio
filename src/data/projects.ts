@@ -4,7 +4,7 @@ export type Project = {
   tags: string[];
   featured?: boolean;
   images?: string[];
-  imageOrientation?: "landscape" | "portrait";
+  galleryOnly?: boolean;
   live?: string;
   code?: string;
 };
@@ -16,7 +16,6 @@ export const projects: Project[] = [
       "Competitive multiplayer typing platform with ranked ELO matchmaking and real-time WebSocket battles.",
     tags: ["Next.js", "TypeScript", "Supabase", "WebSocket"],
     featured: true,
-    imageOrientation: "landscape",
     images: [
       "/projects/typingarena/1.png",
       "/projects/typingarena/2.png",
@@ -33,7 +32,7 @@ export const projects: Project[] = [
     description:
       "Trail discovery and hike-tracking app with live GPS, satellite maps, gear loadouts, and a used-gear marketplace.",
     tags: ["Expo", "React Native", "Supabase", "Mapbox"],
-    imageOrientation: "portrait",
+    galleryOnly: true,
     images: [
       "/projects/caldera/8.png",
       "/projects/caldera/4.png",
