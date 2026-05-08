@@ -1,8 +1,11 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
+import { ResumeModal } from "./ResumeModal";
 
 export function Hero() {
+  const [resumeOpen, setResumeOpen] = useState(false);
   return (
     <section
       id="top"
@@ -50,15 +53,16 @@ export function Hero() {
         >
           View projects
         </a>
-        <a
-          href="/resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
+        <button
+          type="button"
+          onClick={() => setResumeOpen(true)}
           className="inline-flex items-center gap-1.5 rounded-md border border-[#e5e5e5] bg-white px-5 py-2.5 text-sm font-medium text-[#171717] transition-colors hover:border-[#a3a3a3]"
         >
-          Resume <span aria-hidden="true">↗</span>
-        </a>
+          Resume
+        </button>
       </motion.div>
+
+      <ResumeModal open={resumeOpen} onClose={() => setResumeOpen(false)} />
     </section>
   );
 }
