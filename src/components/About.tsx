@@ -42,6 +42,27 @@ export function About() {
           satisfying feedback signal, I probably want to build it.
         </p>
       </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 12 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-60px" }}
+        transition={{ duration: 0.5, delay: 0.1 }}
+        className="mt-12 flex justify-center"
+      >
+        <a
+          href="#contact"
+          className="group inline-flex items-center gap-2 text-sm text-[#737373] transition-colors hover:text-[#171717]"
+        >
+          Contact
+          <span
+            aria-hidden="true"
+            className="transition-transform group-hover:translate-y-0.5"
+          >
+            ↓
+          </span>
+        </a>
+      </motion.div>
     </section>
   );
 }
