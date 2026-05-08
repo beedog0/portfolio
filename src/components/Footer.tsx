@@ -24,20 +24,6 @@ export function Footer() {
               </a>
             </li>
           ))}
-          <li>
-            <a
-              href="#top"
-              className="group inline-flex items-center gap-1.5 transition-colors hover:text-[#171717]"
-            >
-              <span
-                aria-hidden="true"
-                className="transition-transform group-hover:-translate-y-0.5"
-              >
-                ↑
-              </span>
-              Top
-            </a>
-          </li>
         </ul>
       </div>
     </footer>
