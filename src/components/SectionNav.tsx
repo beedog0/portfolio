@@ -12,6 +12,8 @@ const sections = [
 
 export function SectionNav() {
   const [activeId, setActiveId] = useState("top");
+  const [visible, setVisible] = useState(true);
+  const [hovered, setHovered] = useState(false);
 
   useEffect(() => {
     const observers: IntersectionObserver[] = [];
@@ -30,10 +32,32 @@ export function SectionNav() {
     return () => observers.forEach((o) => o.disconnect());
   }, []);
 
+  useEffect(() => {
+    let timeout: ReturnType<typeof setTimeout>;
+    const show = (delay: number) => {
+      setVisible(true);
+      clearTimeout(timeout);
+      timeout = setTimeout(() => setVisible(false), delay);
+    };
+    show(2000);
+    const onScroll = () => show(1200);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => {
+      clearTimeout(timeout);
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
+
+  const shown = visible || hovered;
+
   return (
     <nav
       aria-label="Section navigation"
-      className="fixed left-6 top-1/2 z-40 hidden -translate-y-1/2 md:block"
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      className={`fixed left-6 top-1/2 z-40 hidden -translate-y-1/2 transition-opacity duration-500 md:block ${
+        shown ? "opacity-100" : "opacity-0"
+      }`}
     >
       <ul className="flex flex-col items-start gap-3">
         {sections.map(({ id, label }) => {
