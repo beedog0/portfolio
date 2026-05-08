@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { FlowCue } from "./FlowCue";
 
 const contacts = [
   {
@@ -88,26 +89,7 @@ export function Contact() {
         ))}
       </motion.ul>
 
-      <motion.div
-        initial={{ opacity: 0, y: 12 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-60px" }}
-        transition={{ duration: 0.5, delay: 0.1 }}
-        className="mt-24 flex justify-center"
-      >
-        <a
-          href="#top"
-          className="group inline-flex items-center gap-2 text-sm text-[#737373] transition-colors hover:text-[#171717]"
-        >
-          <span
-            aria-hidden="true"
-            className="transition-transform group-hover:-translate-y-0.5"
-          >
-            ↑
-          </span>
-          Back to top
-        </a>
-      </motion.div>
+      <FlowCue target="#top" label="Back to top" direction="up" className="mt-24" />
     </section>
   );
 }
