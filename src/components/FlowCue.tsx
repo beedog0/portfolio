@@ -18,7 +18,7 @@ export function FlowCue({ target, label, direction, className = "" }: Props) {
     if (!el) return;
     const obs = new IntersectionObserver(
       ([entry]) => setTargetVisible(entry.isIntersecting),
-      { threshold: 0.1 }
+      { rootMargin: "0px 0px -40% 0px" }
     );
     obs.observe(el);
     return () => obs.disconnect();
